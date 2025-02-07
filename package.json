@@ -1,0 +1,27 @@
+{
+  "name": "module1_nodejs_assignment",
+  "version": "1.0.0",
+  "description": "### 1.5 NodeJS Coding Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travoemily-fs/module1_nodejs_assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/travoemily-fs/module1_nodejs_assignment/issues"
+  },
+  "homepage": "https://github.com/travoemily-fs/module1_nodejs_assignment#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}

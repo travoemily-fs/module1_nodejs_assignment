@@ -1,11 +1,10 @@
-
-
 const express = require("express");
 const app = express();
 const router = require("./routes/index");
 
 app.use(express.json());
 
+// basic GET method
 app.get("/", (req, res) => {
   console.log("GET");
   res.json({ message: "hello world" });

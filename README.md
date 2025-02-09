@@ -14,22 +14,16 @@
 
 ## ✅✅ Assignment Checklist
 
-- [x] GET by ID - http://localhost:3000/api/45
+- [x] GET by ID - http://localhost:3000/api/:45
   > 📍 **located in:** `/app/routes/index`
-- [x] PATCH or PUT by ID - http://localhost:3000/api/89
+- [x] PATCH or PUT by ID - http://localhost:3000/api/:89
   > 📍 **located in:** `/app/routes/index`
-- [x] DELETE by ID - http://localhost:3000/api/9
+- [x] DELETE by ID - http://localhost:3000/api/1
   > 📍 **located in:** `/app/routes/index`
 - [x] GET - http://localhost:3000/api
   > 📍 **located in:** `/app/routes/index` <br> _and_ <br> `/app/index`
 - [x] POST - http://localhost:3000/api
-
-#### Two uses of POST method, one with stored data and one without:
-
-> 📍 **_WITHOUT_ stored data located in:** `/app/routes/index`
-
-> 📍 **_WITH_ stored data located in:** `/app/routes/index`
-
+  > 📍 **located in:** `/app/routes/index`
 - [x] These URLs are for viewing the results in Postman and the ID should show in your output
 - [x] You should have 5 methods in all (GET, GET by ID, POST, PUT or PATCH by ID, DELETE by ID)
 - [x] Your localhost:3000 should show your actuator message: "Service is up"

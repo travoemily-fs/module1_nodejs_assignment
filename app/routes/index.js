@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const todos = [];
+const todos = [
+  { id: 1, task: "Learning DELETE method" },
+  { id: 2, task: "Practice makes perfect!" },
+];
 const randomObj = {
   userID: 123,
   name: "Bruce",
@@ -34,40 +37,41 @@ router.get("/:id", (req, res) => {
 });
 
 // DELETE by ID METHOD
-// localhost:3000/api/:9
+// localhost:3000/api/1
 router.delete("/:id", (req, res) => {
-  // pull in an example array
-  const todo = todos.find((element) => element > 10);
-  const id = req.params.id;
+  const id = parseInt(req.params.id);
   console.log("Params >>>", id);
-});
 
-// POST METHOD
-// localhost:3000/api
-router.post("/", (req, res) => {
-  const { data } = req.body;
-  res.status(200).json({
-    message: "POST to /api",
-    data,
-    metadata: {
-      hostname: req.hostname,
-      method: req.method,
-    },
-  });
+  // find the index # of the item you're deleting...
+  const index = todos.findIndex((todo) => todo.id === id);
+  if (index !== -1) {
+    const deletedItem = todos.splice(index, 1)[0];
+    res.status(200).json({
+      message: "Item successfully deleted!",
+      deletedItem,
+    });
+  } else {
+    res.status(400).json({
+      message: "The item you're attempting to delete was not found.",
+    });
+  }
 });
 
 /*
 example post request for Postman:
-{"": ""}
+{"data": "The data has been requested."}
 */
 
 // POST METHOD w/ data
 // localhost:3000/api
 router.post("/", (req, res) => {
   console.log("Request body >>>", req.body);
-  const { data } = req.body.data;
-  todos.push(data);
-  res.status(200).json({ message: "Data request confirmed", data });
+  const { data } = req.body;
+  res.status(200).json({
+    message: "POST to /api",
+    data,
+    metadata: { hostname: req.hostname, method: req.method },
+  });
 });
 
 /* process for getting PUT...
@@ -83,27 +87,28 @@ router.post("/", (req, res) => {
 
   {
   "name": "Clark",
-  "alias": "Superman",
+  "alias": "Superman"
   }
 
 */
 
 // PUT by ID
-// localhost:3000/api/89
+// localhost:3000/api/:89
 router.put("/:id", (req, res) => {
-  console.log("Request body >>>", req.body);
+  console.log("Fetching original data >>>", randomObj);
+  console.log("Computing request body >>>", req.body);
   const id = req.params.id;
 
   // begin the loop
   // use the hasOwnProperty method to check for that the property values we are going to change exist
   Object.keys(req.body).forEach((key) => {
     if (randomObj.hasOwnProperty(key)) {
-      randomObj = req.body[key];
+      randomObj[key] = req.body[key];
     }
   });
   // now send back the updated object with json
   res.status(200).json({
-    message: "User has been updated successfully",
+    message: "The user has been updated successfully!",
     updatedUser: randomObj,
   });
 });

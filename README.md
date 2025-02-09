@@ -1,6 +1,7 @@
-# 🔐📚 WDV353: Module 1
+# 🔐📚 WDV353: Module 1 ➥ 1.5 NodeJS Coding Assignment
 
-### 1.5 NodeJS Coding Assignment
+
+![Banner](https://www.dropbox.com/scl/fi/igyo59flz5or36hrb22ij/banner.png?rlkey=eeift1ygsp6w1quvfofud1biq&raw=1)
 
 ## 🔗 Student info
 
@@ -21,7 +22,7 @@
 - [x] DELETE by ID - http://localhost:3000/api/1
   > 📍 **located in:** `/app/routes/index`
 - [x] GET - http://localhost:3000/api
-  > 📍 **located in:** `/app/routes/index` <br> _and_ <br> `/app/index`
+  > 📍 **located in:** <br> `/app/routes/index` <br> _and_ <br> `/app/index`
 - [x] POST - http://localhost:3000/api
   > 📍 **located in:** `/app/routes/index`
 - [x] These URLs are for viewing the results in Postman and the ID should show in your output

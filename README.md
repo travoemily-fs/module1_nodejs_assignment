@@ -1,7 +1,8 @@
 # 🔐📚 WDV353: Module 1 ➥ 1.5 NodeJS Coding Assignment
 
-
 ![Banner](https://www.dropbox.com/scl/fi/igyo59flz5or36hrb22ij/banner.png?rlkey=eeift1ygsp6w1quvfofud1biq&raw=1)
+
+### 🎥 Video presentation ⤷ [x](https://youtu.be/jDAQiTDoIgk)
 
 ## 🔗 Student info
 
